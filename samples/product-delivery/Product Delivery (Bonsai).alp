@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 *************************************************
-	         AnyLogic Project File 
-*************************************************	         
+	         AnyLogic Project File
+*************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.8.1.202210270952" AlpVersion="8.7.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.3.202411201856" AlpVersion="8.9.2">
 <Model>
 	<Id>1406111021221</Id>
 	<Name><![CDATA[Product Delivery (Bonsai)]]></Name>
@@ -28,6 +28,10 @@ Note: Any other sources of costs are considered irrelevant or negligible and are
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[product_delivery_bonsai]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Hour]]></ModelTimeUnit>
+	
+	<Folders>
+		
+	</Folders>
 	<ActiveObjectClasses>
 		<!--   =========   Active Object Class   ========  -->
 		<ActiveObjectClass>
@@ -39,7 +43,6 @@ private final SimpleDateFormat customDateFmtr = new SimpleDateFormat("MMM dd (E)
 
 ObjectMapper mapper = null;
 HttpClient httpClient = null;]]></AdditionalClassCode>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Import><![CDATA[import java.text.SimpleDateFormat;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -95,7 +98,6 @@ setupPlayback();]]></StartupCode>
 			<SceneBackgroundColor/>
 			<SceneSkybox>null</SceneSkybox>
 			<AgentProperties>
-	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
@@ -130,14 +132,11 @@ setupPlayback();]]></StartupCode>
 					<RowsCountCode><![CDATA[100]]></RowsCountCode>
 					<NeigborhoodType>MOORE</NeigborhoodType>
 					<LayoutType>USER_DEF</LayoutType>
-					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
 					<NetworkType>USER_DEF</NetworkType>
-					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
 					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
 					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
 					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
 					<MCode><![CDATA[10]]></MCode>
-					<GisMapCode><![CDATA[map]]></GisMapCode>
 			</EnvironmentProperties>
 			<DatasetsCreationProperties>
 				<AutoCreate>false</AutoCreate>
@@ -1810,29 +1809,14 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<ColumnCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</ColumnCode>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -1868,7 +1852,7 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 								<ClassName><![CDATA[distributor_inputs]]></ClassName>
 								<ItemName><![CDATA[city]]></ItemName>
 							</Value>
-						</Item>	
+						</Item>
 					</ParameterToDatabaseColumnMapping>
 				</EmbeddedObject>
 				<EmbeddedObject>
@@ -1933,8 +1917,8 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -1950,12 +1934,6 @@ groupMainMenu.setPos( viewArea.getX(), viewArea.getY() );]]></Body>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -2014,29 +1992,14 @@ new double[]{staticRateChi, staticRatePit, staticRateNsh}[index]]]></Code>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<ColumnCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</ColumnCode>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -2096,7 +2059,7 @@ new double[]{staticRateChi, staticRatePit, staticRateNsh}[index]]]></Code>
 								<ClassName><![CDATA[manufacturing_center_inputs]]></ClassName>
 								<ItemName><![CDATA[initial_products]]></ItemName>
 							</Value>
-						</Item>	
+						</Item>
 					</ParameterToDatabaseColumnMapping>
 				</EmbeddedObject>
 			</EmbeddedObjects>
@@ -2195,7 +2158,6 @@ new double[]{staticRateChi, staticRatePit, staticRateNsh}[index]]]></Code>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
 					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
 					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
@@ -2214,7 +2176,6 @@ new double[]{staticRateChi, staticRatePit, staticRateNsh}[index]]]></Code>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
 					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
 					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
@@ -2550,21 +2511,18 @@ funcs]]></Text>
 					<Id>1654881167185</Id>
 					<Expression><![CDATA[(int)(manufacturingCenters.get(0).fleet.utilization()*100)]]></Expression>
 					<Color>-14774017</Color>
-					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Chicago]]></Title>
 					</DataItem>
 					<DataItem>
 					<Id>1654881167186</Id>
 					<Expression><![CDATA[(int)(manufacturingCenters.get(1).fleet.utilization()*100)]]></Expression>
 					<Color>-3308225</Color>
-					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Pittsburg]]></Title>
 					</DataItem>
 					<DataItem>
 					<Id>1654881167187</Id>
 					<Expression><![CDATA[(int)(manufacturingCenters.get(2).fleet.utilization()*100)]]></Expression>
 					<Color>-16744448</Color>
-					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Nashville]]></Title>
 					</DataItem>
 					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
@@ -2651,7 +2609,7 @@ funcs]]></Text>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-14774017</Color>
 					<Expression2><![CDATA[manufacturingCenters.get(0).products]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>  
+					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Chicago]]></Title>
 					</DatasetExpression>
 					<DatasetExpression>
@@ -2659,7 +2617,7 @@ funcs]]></Text>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-3308225</Color>
 					<Expression2><![CDATA[manufacturingCenters.get(1).products]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>  
+					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Pittsburg]]></Title>
 					</DatasetExpression>
 					<DatasetExpression>
@@ -2667,7 +2625,7 @@ funcs]]></Text>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-16744448</Color>
 					<Expression2><![CDATA[manufacturingCenters.get(2).products]]></Expression2>
-					<Expression2Flag>true</Expression2Flag>  
+					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Nashville]]></Title>
 					</DatasetExpression>
 					<SamplesToKeep>150</SamplesToKeep>
@@ -2775,21 +2733,18 @@ funcs]]></Text>
 					<Id>1663796643708</Id>
 					<Expression><![CDATA[zidz(manufacturingCenters.get(0).costs, time(DAY))]]></Expression>
 					<Color>-14774017</Color>
-					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Chicago]]></Title>
 					</DataItem>
 					<DataItem>
 					<Id>1663796643709</Id>
 					<Expression><![CDATA[zidz(manufacturingCenters.get(1).costs, time(DAY))]]></Expression>
 					<Color>-3308225</Color>
-					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Pittsburg]]></Title>
 					</DataItem>
 					<DataItem>
 					<Id>1663796643710</Id>
 					<Expression><![CDATA[zidz(manufacturingCenters.get(2).costs, time(DAY))]]></Expression>
 					<Color>-16744448</Color>
-					<Expression2Flag>true</Expression2Flag>
 						<Title><![CDATA[Nashville]]></Title>
 					</DataItem>
 					<ScaleFromExpression><![CDATA[0]]></ScaleFromExpression>
@@ -3478,7 +3433,6 @@ dash.navigate(dash.selectedViewArea);]]></OnClickCode>
 		<ActiveObjectClass>
 			<Id>1406111474539</Id>
 			<Name><![CDATA[ManufacturingCenter]]></Name>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Import><![CDATA[import com.google.common.collect.EvictingQueue;
 import java.util.Queue;
 import java.util.stream.Collectors;]]></Import>
@@ -3502,7 +3456,6 @@ setProductionRateStats.add(setProductionRate);]]></StartupCode>
 			<SceneBackgroundColor/>
 			<SceneSkybox>null</SceneSkybox>
 			<AgentProperties>
-	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
@@ -3537,9 +3490,7 @@ setProductionRateStats.add(setProductionRate);]]></StartupCode>
 					<RowsCountCode><![CDATA[100]]></RowsCountCode>
 					<NeigborhoodType>MOORE</NeigborhoodType>
 					<LayoutType>USER_DEF</LayoutType>
-					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
 					<NetworkType>USER_DEF</NetworkType>
-					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
 					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
 					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
 					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
@@ -4698,7 +4649,7 @@ amountReceivedHistory.add(agent.amount);]]></Code>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -4714,12 +4665,6 @@ amountReceivedHistory.add(agent.amount);]]></Code>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -4929,7 +4874,7 @@ send( agent, unit );]]></Code>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -4945,12 +4890,6 @@ send( agent, unit );]]></Code>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -5267,7 +5206,7 @@ unit.setLocation(this);]]></Code>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -5283,12 +5222,6 @@ unit.setLocation(this);]]></Code>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -5369,7 +5302,7 @@ unit.setLocation(this);]]></Code>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -5385,12 +5318,6 @@ unit.setLocation(this);]]></Code>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -5474,7 +5401,7 @@ unit.setLocation(this);]]></Code>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -5490,12 +5417,6 @@ unit.setLocation(this);]]></Code>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -5540,7 +5461,7 @@ unit.setLocation(this);]]></Code>
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -5556,12 +5477,6 @@ unit.setLocation(this);]]></Code>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -5662,7 +5577,7 @@ main.waitingForFulfillment.add( timeInFlow );
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -5678,12 +5593,6 @@ main.waitingForFulfillment.add( timeInFlow );
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -5783,7 +5692,7 @@ main.waitingForFulfillment.add( timeInFlow );
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</XCode>
@@ -5799,12 +5708,6 @@ main.waitingForFulfillment.add( timeInFlow );
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -5847,29 +5750,14 @@ main.waitingForFulfillment.add( timeInFlow );
 						<Code><![CDATA[100]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
-					<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
-					<XCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</XCode>
-					<YCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</YCode>
-					<ZCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</ZCode>
+					<InEnvironment>true</InEnvironment>
+					<InitialLocationType>XYZ</InitialLocationType>
 					<ColumnCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</ColumnCode>
 					<RowCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
 					</RowCode>
-					<LatitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LatitudeCode>
-					<LongitudeCode Class="CodeValue">
-						<Code><![CDATA[0]]></Code>
-					</LongitudeCode>
 					<LocationNameCode Class="CodeValue">
 						<Code><![CDATA[""]]></Code>
 					</LocationNameCode>
@@ -6470,8 +6358,7 @@ agent callbacks]]></Text>
 					<HistogramDataExpression>
 					<Id>1661364325376</Id>
 					<Expression><![CDATA[dowByRateH2D]]></Expression>
-					<Color>-14774017</Color>
-					<Expression2Flag>true</Expression2Flag>  
+					<Color>-14774017</Color>  
 							<Title><![CDATA[dowByRateH2D]]></Title>
 					</HistogramDataExpression>
     			</Histogram2D>
@@ -6524,8 +6411,7 @@ agent callbacks]]></Text>
 					<HistogramDataExpression>
 					<Id>1662564201389</Id>
 					<Expression><![CDATA[dowByCountH2D]]></Expression>
-					<Color>-12799119</Color>
-					<Expression2Flag>true</Expression2Flag>  
+					<Color>-12799119</Color>  
 							<Title><![CDATA[dowByCountH2D]]></Title>
 					</HistogramDataExpression>
     			</Histogram2D>
@@ -6599,8 +6485,7 @@ agent callbacks]]></Text>
 					<HistogramDataExpression>
 					<Id>1662568445218</Id>
 					<Expression><![CDATA[dowByOrderTotalH2D]]></Expression>
-					<Color>-12799119</Color>
-					<Expression2Flag>true</Expression2Flag>  
+					<Color>-12799119</Color>  
 							<Title><![CDATA[dowByOrderTotalH2D]]></Title>
 					</HistogramDataExpression>
     			</Histogram2D>
@@ -6661,7 +6546,6 @@ agent callbacks]]></Text>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
 					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
 					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
@@ -6692,7 +6576,6 @@ agent callbacks]]></Text>
 		<ActiveObjectClass>
 			<Id>1406123796618</Id>
 			<Name><![CDATA[Distributor]]></Name>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Import><![CDATA[import java.util.stream.IntStream;
 import java.util.stream.Collectors;
 import java.text.SimpleDateFormat;
@@ -6721,7 +6604,6 @@ import com.querydsl.core.types.dsl.NumberPath;]]></Import>
 			<SceneBackgroundColor/>
 			<SceneSkybox>null</SceneSkybox>
 			<AgentProperties>
-	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
@@ -6756,9 +6638,7 @@ import com.querydsl.core.types.dsl.NumberPath;]]></Import>
 					<RowsCountCode><![CDATA[100]]></RowsCountCode>
 					<NeigborhoodType>MOORE</NeigborhoodType>
 					<LayoutType>USER_DEF</LayoutType>
-					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
 					<NetworkType>USER_DEF</NetworkType>
-					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
 					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
 					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
 					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
@@ -7193,9 +7073,9 @@ return triangular(amountMin*m, amountMean*m, amountMax*m, main.dRand);]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<InterpolationMethod>NONE</InterpolationMethod>
 					<Type>CONTINUOUS</Type>
-					<DefinitionType>HISTOGRAM</DefinitionType>
+					<DefinitionType>RANGES</DefinitionType>
+					<IntegerValues>false</IntegerValues>
 					<Static>false</Static>
 					<LoadFromDatabase><![CDATA[false]]></LoadFromDatabase>
 					<RangesQuery>
@@ -7205,8 +7085,8 @@ return triangular(amountMin*m, amountMean*m, amountMax*m, main.dRand);]]></Body>
 						</StartColumnReference>
 						<EndColumnReference>
 						</EndColumnReference>
-						<NumberOfObservationColumnReference>
-						</NumberOfObservationColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
 					</RangesQuery>
 					<FrequencyQuery>
 					<TableReference>
@@ -7227,8 +7107,8 @@ return triangular(amountMin*m, amountMean*m, amountMax*m, main.dRand);]]></Body>
 					</TableReference>
 						<OptionColumnReference>
 						</OptionColumnReference>
-						<NumberOfObservationColumnReference>
-						</NumberOfObservationColumnReference>
+						<WeightColumnReference>
+						</WeightColumnReference>
 					</OptionQuery>					
 					<Argument><![CDATA[0.0]]></Argument>
 					<Argument><![CDATA[5.0]]></Argument>
@@ -7247,19 +7127,34 @@ return triangular(amountMin*m, amountMean*m, amountMax*m, main.dRand);]]></Body>
 					<Value><![CDATA[6.5]]></Value>
 					<Value><![CDATA[3.0]]></Value>
 					<Value><![CDATA[0.0]]></Value>
-					<Value><![CDATA[0.0]]></Value>					
+					<Value><![CDATA[0.0]]></Value>
+					<Start><![CDATA[0.0]]></Start>
+					<Start><![CDATA[5.0]]></Start>
+					<Start><![CDATA[8.0]]></Start>
+					<Start><![CDATA[11.0]]></Start>
+					<Start><![CDATA[13.0]]></Start>
+					<Start><![CDATA[15.0]]></Start>
+					<Start><![CDATA[17.5]]></Start>
+					<Start><![CDATA[20.0]]></Start>
+					<End><![CDATA[5.0]]></End>
+					<End><![CDATA[8.0]]></End>
+					<End><![CDATA[11.0]]></End>
+					<End><![CDATA[13.0]]></End>
+					<End><![CDATA[15.0]]></End>
+					<End><![CDATA[17.5]]></End>
+					<End><![CDATA[20.0]]></End>
+					<End><![CDATA[24.0]]></End>
+					<RangeValue><![CDATA[0.0]]></RangeValue>
+					<RangeValue><![CDATA[3.0]]></RangeValue>
+					<RangeValue><![CDATA[10.0]]></RangeValue>
+					<RangeValue><![CDATA[8.0]]></RangeValue>
+					<RangeValue><![CDATA[5.0]]></RangeValue>
+					<RangeValue><![CDATA[6.5]]></RangeValue>
+					<RangeValue><![CDATA[3.0]]></RangeValue>
+					<RangeValue><![CDATA[0.0]]></RangeValue>					
 					<OptionListID><![CDATA[0]]></OptionListID>
 					<OptionValues>				
-					</OptionValues>
-					<Argument><![CDATA[0.0]]></Argument>
-					<Argument><![CDATA[5.0]]></Argument>
-					<Argument><![CDATA[8.0]]></Argument>
-					<Argument><![CDATA[11.0]]></Argument>
-					<Argument><![CDATA[13.0]]></Argument>
-					<Argument><![CDATA[15.0]]></Argument>
-					<Argument><![CDATA[17.5]]></Argument>
-					<Argument><![CDATA[20.0]]></Argument>
-					<Argument><![CDATA[24.0]]></Argument>				
+					</OptionValues>				
 				</CustomDistribution>		
 			</CustomDistributions>
 			<AgentLinks>
@@ -7655,7 +7550,6 @@ return triangular(amountMin*m, amountMean*m, amountMax*m, main.dRand);]]></Body>
 		<ActiveObjectClass>
 			<Id>1406128140758</Id>
 			<Name><![CDATA[Vehicle]]></Name>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1412681287475</Id>
@@ -7674,7 +7568,6 @@ return triangular(amountMin*m, amountMean*m, amountMax*m, main.dRand);]]></Body>
 			<SceneBackgroundColor/>
 			<SceneSkybox>null</SceneSkybox>
 			<AgentProperties>
-	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
@@ -7709,9 +7602,7 @@ return triangular(amountMin*m, amountMean*m, amountMax*m, main.dRand);]]></Body>
 					<RowsCountCode><![CDATA[100]]></RowsCountCode>
 					<NeigborhoodType>MOORE</NeigborhoodType>
 					<LayoutType>USER_DEF</LayoutType>
-					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
 					<NetworkType>USER_DEF</NetworkType>
-					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
 					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
 					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
 					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
@@ -8176,7 +8067,7 @@ dest.setText( order.distributor.name );]]></Action>
 					<ApplyShading>true</ApplyShading>
 					<InternalLighting>OFF</InternalLighting>
 					<IgnoreSceneLights>false</IgnoreSceneLights>
-				</Figure3D>
+</Figure3D>
 			</Presentation>
 
 				</Group>
@@ -8246,7 +8137,6 @@ dest.setText( order.distributor.name );]]></Action>
 		<ActiveObjectClass>
 			<Id>1407933131394</Id>
 			<Name><![CDATA[Order]]></Name>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1412681287490</Id>
@@ -8265,7 +8155,6 @@ dest.setText( order.distributor.name );]]></Action>
 			<SceneBackgroundColor/>
 			<SceneSkybox>null</SceneSkybox>
 			<AgentProperties>
-	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
@@ -8300,9 +8189,7 @@ dest.setText( order.distributor.name );]]></Action>
 					<RowsCountCode><![CDATA[100]]></RowsCountCode>
 					<NeigborhoodType>MOORE</NeigborhoodType>
 					<LayoutType>USER_DEF</LayoutType>
-					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
 					<NetworkType>USER_DEF</NetworkType>
-					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
 					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
 					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
 					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
@@ -8454,7 +8341,6 @@ dest.setText( order.distributor.name );]]></Action>
 public static Color updateTransparency(Color color, int alpha) {
 	return new Color(color.getRed(), color.getGreen(), color.getBlue(), alpha);
 }]]></AdditionalClassCode>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Import><![CDATA[import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.IntStream;
@@ -8491,7 +8377,6 @@ output.println(alj.toJson(this, true));]]></DestroyCode>
 			<SceneBackgroundColor/>
 			<SceneSkybox>null</SceneSkybox>
 			<AgentProperties>
-	 			<SpaceType>CONTINUOUS</SpaceType>			
 				<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
 				<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
 				<RotateAnimationVertically>false</RotateAnimationVertically>
@@ -8526,9 +8411,7 @@ output.println(alj.toJson(this, true));]]></DestroyCode>
 					<RowsCountCode><![CDATA[100]]></RowsCountCode>
 					<NeigborhoodType>MOORE</NeigborhoodType>
 					<LayoutType>USER_DEF</LayoutType>
-					<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
 					<NetworkType>USER_DEF</NetworkType>
-					<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
 					<ConnectionsPerAgentCode><![CDATA[2]]></ConnectionsPerAgentCode>
 					<ConnectionsRangeCode><![CDATA[50]]></ConnectionsRangeCode>
 					<NeighborLinkFractionCode><![CDATA[0.95]]></NeighborLinkFractionCode>
@@ -9611,7 +9494,7 @@ new LogicConfig().overrideTruckStraightRoute(true)]]></Code>
 						<Code><![CDATA[countTrues(includeStatic, includeHeuristic, includePolicy) + (includeBrains ? 1+brainsURLArg.replaceAll("[^,]+","").length() : 0)]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
-					<InEnvironment>true</InEnvironment>	
+					<InEnvironment>true</InEnvironment>
 					<InitialLocationType>XYZ</InitialLocationType>
 					<XCode Class="CodeValue">
 						<Code><![CDATA[0]]></Code>
@@ -10797,28 +10680,6 @@ rates]]></Text>
 					<Dy>495</Dy>
 					<Dz>0</Dz>
 				</Line>
-				<EmbeddedObjectPresentation>
-					<Id>1665778777181</Id>
-					<Name><![CDATA[mains_presentation]]></Name>
-					<X>1360</X><Y>0</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<EmbeddedIcon>false</EmbeddedIcon>
-					<Z>0</Z>
-					<Rotation>0.0</Rotation>
-					<ScaleXCode><![CDATA[animationScale]]></ScaleXCode>
-					<ScaleYCode><![CDATA[animationScale]]></ScaleYCode>
-					<ScaleZCode><![CDATA[animationScale]]></ScaleZCode>
-					<DrawingMode>POSITION_WITH_OFFSET</DrawingMode>
-					<ScaleType>DEFINED_EXPLICITLY</ScaleType>
-					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
-					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
-					<Latitude>0.0</Latitude>
-					<Longitude>0.0</Longitude>
-				</EmbeddedObjectPresentation>
 				<Rectangle>
 					<Id>1665780420408</Id>
 					<Name><![CDATA[rectangle14]]></Name>
@@ -11701,6 +11562,42 @@ All the help text/animation was set to be completely hidden unless you're focuse
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Group>
+					<Id>1738931094199</Id>
+					<Name><![CDATA[group]]></Name>
+					<X>1360</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+
+			<Presentation>
+				<EmbeddedObjectPresentation>
+					<Id>1665778777181</Id>
+					<Name><![CDATA[mains_presentation]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<ScaleCode><![CDATA[animationScale]]></ScaleCode>
+					<ScaleType>DEFINED_EXPLICITLY</ScaleType>
+					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+					<Latitude>0.0</Latitude>
+					<Longitude>0.0</Longitude>
+				</EmbeddedObjectPresentation>
+			</Presentation>
+
+				</Group>
 			</Presentation>
 
 				</Level>
@@ -12561,7 +12458,7 @@ Although it doesn't look like it, the lines below will point to what they're des
 			</Areas>
 
 		</ActiveObjectClass>
-	</ActiveObjectClasses>	
+	</ActiveObjectClasses>
 	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
 	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
@@ -12598,7 +12495,7 @@ Although it doesn't look like it, the lines below will point to what they're des
 			</TableReference>
 		</ExportSettings>
 	</Database>
-	
+
 	<RunConfiguration ActiveObjectClassId="1664825702736">
 		<Id>1481814019729</Id>
 		<Name><![CDATA[RunConfiguration]]></Name>
@@ -12766,12 +12663,11 @@ Although it doesn't look like it, the lines below will point to what they're des
     		</RunConfigurationOutput>
 		</Outputs>
 	</RunConfiguration>
-	<Experiments>	
+	<Experiments>
 		<!--   =========   Simulation Experiment   ========  -->
 		<SimulationExperiment ActiveObjectClassId="1406111021224">
 			<Id>1406111021227</Id>
 			<Name><![CDATA[SingleSimulation]]></Name>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Import><![CDATA[import java.text.SimpleDateFormat;
 import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Collectors;]]></Import>
@@ -14278,7 +14174,7 @@ To compare the options, use the 'Comparator' experiment.]]></Text>
 				</Text>
 			</Presentation>
 
-			<Parameters>			
+			<Parameters>
 				<Parameter>
 					<ParameterName><![CDATA[exeMode]]></ParameterName>
 					<ParameterValue Class="CodeValue">
@@ -14373,21 +14269,21 @@ To compare the options, use the 'Comparator' experiment.]]></Text>
 						<Code><![CDATA[v_dbCleanRuns]]></Code>
 					</ParameterValue>
 				</Parameter>
-			</Parameters>			
+			</Parameters>
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<Title><![CDATA[Product Delivery : Simulation]]></Title>	
+				<Title><![CDATA[Product Delivery : Simulation]]></Title>
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 				<RealTimeScale>5.0</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Never]]></StopOption>
-				<InitialDate><![CDATA[1640995200000]]></InitialDate>	
-				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1798761600000]]></FinalDate>	
-				<FinalTime><![CDATA[43824.0]]></FinalTime>	
+				<InitialDate><![CDATA[1640995200000]]></InitialDate>
+				<InitialTime><![CDATA[0.0]]></InitialTime>
+				<FinalDate><![CDATA[1798761600000]]></FinalDate>
+				<FinalTime><![CDATA[43824.0]]></FinalTime>
 			</ModelTimeProperties>
 			<BypassInitialScreen>false</BypassInitialScreen>
 		</SimulationExperiment>
@@ -14395,7 +14291,6 @@ To compare the options, use the 'Comparator' experiment.]]></Text>
 		<SimulationExperiment ActiveObjectClassId="1664825702736">
 			<Id>1664832264139</Id>
 			<Name><![CDATA[PolicyComparator]]></Name>
-			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Import><![CDATA[import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Collectors;]]></Import>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
@@ -15585,7 +15480,7 @@ For help with navigation, click the help button on the bottom right.]]></Text>
 				</Text>
 			</Presentation>
 
-			<Parameters>			
+			<Parameters>
 				<Parameter>
 					<ParameterName><![CDATA[includeStatic]]></ParameterName>
 					<ParameterValue Class="CodeValue">
@@ -15667,21 +15562,21 @@ For help with navigation, click the help button on the bottom right.]]></Text>
 				<Parameter>
 					<ParameterName><![CDATA[messageForOutput]]></ParameterName>
 				</Parameter>
-			</Parameters>			
+			</Parameters>
 			<PresentationProperties>
 				<EnableZoomAndPanning>false</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
-				<Title><![CDATA[Product Delivery (Bonsai)  : Policy Comparison Dashboard]]></Title>	
+				<Title><![CDATA[Product Delivery (Bonsai)  : Policy Comparison Dashboard]]></Title>
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 				<RealTimeScale>50.0</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified date]]></StopOption>
-				<InitialDate><![CDATA[1640995200000]]></InitialDate>	
-				<InitialTime><![CDATA[0.0]]></InitialTime>	
-				<FinalDate><![CDATA[1672531200000]]></FinalDate>	
-				<FinalTime><![CDATA[8760.0]]></FinalTime>	
+				<InitialDate><![CDATA[1640995200000]]></InitialDate>
+				<InitialTime><![CDATA[0.0]]></InitialTime>
+				<FinalDate><![CDATA[1672531200000]]></FinalDate>
+				<FinalTime><![CDATA[8760.0]]></FinalTime>
 			</ModelTimeProperties>
 			<BypassInitialScreen>false</BypassInitialScreen>
 		</SimulationExperiment>	
@@ -15924,102 +15819,132 @@ public class LogicConfig {
 		<Resource>
 			<Path><![CDATA[3d/lorry.dae]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[outputs.xlsx]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[multirun_output-product_delivery.json]]></Path>
 			<ReferencedFromUserCode>true</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-client-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-continuation-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-http-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-io-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-security-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-server-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-servlet-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-servlets-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-util-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-webapp-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/jetty-xml-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/slf4j-api-1.7.25.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/spark-core-2.9.3.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/websocket-api-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/websocket-client-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/websocket-common-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/websocket-server-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/websocket-servlet-9.4.31.v20200723.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/cloud/javax.servlet-api-3.1.0.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/commons-lang3-3.12.0.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[libs/ALJSONifierLib.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[sim_screenshot.jpg]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[guava-32.1.2-jre.jar]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+			<Location>FILE_SYSTEM</Location>
 		</Resource>
 	</ModelResources>
     <RequiredLibraryReference>
@@ -16212,6 +16137,14 @@ public class LogicConfig {
 			<ClassName><![CDATA[libs/cloud/websocket-servlet-9.4.31.v20200723.jar]]></ClassName>
 		</ResourceReference>
 		<Imported>false</Imported>
+		<Folder>false</Folder>
+	</ClassPathEntry>
+	<ClassPathEntry>
+		<ResourceReference>
+			<PackageName><![CDATA[product_delivery_bonsai]]></PackageName>
+			<ClassName><![CDATA[guava-32.1.2-jre.jar]]></ClassName>
+		</ResourceReference>
+		<Imported>true</Imported>
 		<Folder>false</Folder>
 	</ClassPathEntry>
 	<CloudModelUuid><![CDATA[faee7979-6eda-425e-bd33-d0b51b1bd9e9]]></CloudModelUuid>
